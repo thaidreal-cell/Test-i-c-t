@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mã 8 số</title>
+
+<style>
+body{
+    background:#0f172a;
+    color:white;
+    font-family:Arial;
+    text-align:center;
+    margin-top:40px;
+}
+
+#khung{
+    display:inline-block;
+    padding:20px;
+    border:3px solid #22c55e;
+    border-radius:15px;
+    background:#020617;
+}
+
+.so{
+    font-size:50px;
+    margin:8px;
+    color:#00ff88;
+    font-weight:bold;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 30px;
+    font-size:20px;
+    border:none;
+    border-radius:12px;
+    background:#22c55e;
+    color:black;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Tạo mã 8 số</h1>
+
+<div id="khung">
+    <div class="so" id="s1">0</div>
+    <div class="so" id="s2">0</div>
+    <div class="so" id="s3">0</div>
+    <div class="so" id="s4">0</div>
+    <div class="so" id="s5">0</div>
+    <div class="so" id="s6">0</div>
+    <div class="so" id="s7">0</div>
+    <div class="so" id="s8">0</div>
+</div>
+
+<br>
+<button onclick="taoma()">TẠO MÃ</button>
+
+<script>
+function taoma(){
+
+    // tạo 8 số cùng lúc
+    for(let i=1;i<=8;i++){
+        let so = Math.floor(Math.random()*100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000);
+        document.getElementById("s"+i).innerText = so;
+    }
+
+}
+</script>
+
+</body>
+</html>
